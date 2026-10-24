@@ -1,0 +1,4 @@
+<testsuite name="bad-shard" tests="3" failures="0">
+  <testcase classname="demo.Parser" name="accepts_utf8" />
+  <testcase classname="demo.Parser" name="accepts_utf8" />
+</testsuite>

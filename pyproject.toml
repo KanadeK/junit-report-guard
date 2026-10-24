@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "junit-report-guard"
+version = "0.1.0"
+description = "Catch duplicate tests, stale counts and malformed JUnit reports before publishing CI results"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "KanadeK"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+junit-report-guard = "junit_report_guard.cli:main"
+
+[project.urls]
+Repository = "https://github.com/KanadeK/junit-report-guard"
+Issues = "https://github.com/KanadeK/junit-report-guard/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
